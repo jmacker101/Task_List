@@ -1,15 +1,34 @@
 // Retrieve tasks and nextId from localStorage
 let taskList = JSON.parse(localStorage.getItem("tasks"));
 let nextId = JSON.parse(localStorage.getItem("nextId"));
-
+console.log = (localStorage)
 // Todo: create a function to generate a unique task id
 function generateTaskId() {
+    $("#bt").click(function () {
 
+        $("#form").append(
+            "<select id='state' name='state' onchange='getCity()'>
+            < option ></option >
+let.getItem='To Do';
+                    getItem='In Progress'>arizona</option>
+                   getItem='Done'>texas</option>
+                </select >
+                <select id='city' name='city' style='width:100px'></select><br/>"
+        );
+    });
 }
 
 // Todo: create a function to create a task card
 function createTaskCard(task) {
-
+    const cardBtns = document.querySelectorAll('.cardBtn');
+    const cardDetails = document.querySelectorAll(".card-details");
+    console.log 
+    cardBtns.forEach(function(cardBtn) {
+      cardBtn.addEventListener('click', function() {
+        cardDetails.classList.toggle('card-open');
+      });
+    
+    });
 }
 
 // Todo: create a function to render the task list and make cards draggable
@@ -18,12 +37,12 @@ function renderTaskList() {
 }
 
 // Todo: create a function to handle adding a new task
-function handleAddTask(event){
+function handleAddTask(event) {
 
 }
 
 // Todo: create a function to handle deleting a task
-function handleDeleteTask(event){
+function handleDeleteTask(event) {
 
 }
 
